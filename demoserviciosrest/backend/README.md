@@ -1,16 +1,16 @@
 # Api Rest Básico
 
-> Api Rest endpoint http://localhost:8081/api/iluminacion/consultar
+> Api Rest endpoint
 
 ## Características
 
-1. **Análisis sonarlint**
+1. **Cobertura de código**
    - ![](doc/1_cobertura.png)
 
-2. **Cobertura de código**
+2. **Análisis sonarlint**
    - ![](doc/2_sonarlint.png)
 
-3. **Cobertura de código: Resultado**
+3. **Análisis sonarlint: Resultado**
    - ![](doc/2_sonarlint_analisis.png)
 
 4. **End point**
