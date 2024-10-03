@@ -1,6 +1,8 @@
 package com.serviciosrest.demoserviciosrest.manager;
 
-import com.serviciosrest.demoserviciosrest.IluminacionHogarDTO;
+import com.serviciosrest.demoserviciosrest.dto.IluminacionHogarDTO;
+import com.serviciosrest.demoserviciosrest.entities.DispositivoEntity;
+import com.serviciosrest.demoserviciosrest.repository.DispositivoRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
@@ -11,14 +13,19 @@ import java.util.List;
 @Log4j2
 @RequiredArgsConstructor
 public class IluminacionManagerImpl implements IluminacionManager {
+    private final DispositivoRepository dispositivoRepository;
 
     @Override
     public List<IluminacionHogarDTO> consultar() {
-        return List.of(
-            new IluminacionHogarDTO("A001", "Sala", true),
-            new IluminacionHogarDTO("A001", "Comedor", false),
-            new IluminacionHogarDTO("A002", "Sala", true)
-        );
+        List<DispositivoEntity> listaDispositivos = dispositivoRepository.findAll();
+
+        return listaDispositivos.stream()
+            .map(data -> new IluminacionHogarDTO(
+                    data.getHabitacion().getCasa().getNombre(),
+                    data.getHabitacion().getTipo(),
+                    data.getTipo(),
+                    data.getEstado()
+            )).toList();
     }
 
 }

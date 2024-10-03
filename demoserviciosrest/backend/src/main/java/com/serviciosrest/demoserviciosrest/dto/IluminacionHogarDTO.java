@@ -1,4 +1,4 @@
-package com.serviciosrest.demoserviciosrest;
+package com.serviciosrest.demoserviciosrest.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +15,7 @@ public class IluminacionHogarDTO implements Serializable {
     private static final long serialVersionUID = 7167762692330801803L;
 
     private String casa;
-    private String cuarto;
+    private String habitacion;
+    private String tipo;
     private boolean estado;
 }

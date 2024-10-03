@@ -1,6 +1,6 @@
 package com.serviciosrest.demoserviciosrest.manager;
 
-import com.serviciosrest.demoserviciosrest.IluminacionHogarDTO;
+import com.serviciosrest.demoserviciosrest.dto.IluminacionHogarDTO;
 
 import java.util.List;
 

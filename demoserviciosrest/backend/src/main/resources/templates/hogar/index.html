@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de Iluminación</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .casa-card {
+            position: relative;
+            width: 220px; /* Ancho de la tarjeta */
+            height: 220px; /* Alto de la tarjeta */
+            background-color: #e4f5de; /* Color de la casa */
+            border: 4px solid #666; /* Borde más ancho que simula la cerca */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .techo {
+            position: absolute;
+            top: -20px; /* Para ajustar la posición del techo */
+            left: 0;
+            right: 0;
+            height: 0;
+            width: 0;
+            border-left: 110px solid transparent; /* Ancho del lado izquierdo del techo */
+            border-right: 110px solid transparent; /* Ancho del lado derecho del techo */
+            border-bottom: 20px solid #8d6e63; /* Color del techo */
+        }
+
+        .habitacion {
+            text-align: center;
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .foco {
+            background: radial-gradient(circle, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 0, 0.5) 50%, rgba(255, 255, 0, 0) 100%);
+            border: 1px solid #ffd700;
+            color: #333;
+        }
+
+        .apagado {
+            background-color: #4b4b4b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="container-hogares">
+    <!-- Las tarjetas se generarán dinámicamente aquí -->
+</div>
+
+<!-- Añadir el script de jQuery para AJAX -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Realizar una petición AJAX para obtener los datos de las habitaciones y dispositivos
+        $.ajax({
+            url: 'http://localhost:8081/control-hogar/api/iluminacion/consultar',  // Aquí se llama a tu API para obtener los datos
+            method: 'GET',
+            success: function (response) {
+                // Crear un objeto para almacenar las casas y sus habitaciones
+                const casas = {};
+
+                // Iterar sobre la respuesta y agrupar habitaciones por casa
+                response.forEach(function (data) {
+                    // Si la casa no existe, crearla
+                    if (!casas[data.casa]) {
+                        casas[data.casa] = [];
+                    }
+                    // Agregar la habitación a la casa correspondiente
+                    casas[data.casa].push({
+                        habitacion: data.habitacion,
+                        tipo: data.tipo,
+                        estado: data.estado
+                    });
+                });
+
+                // Ahora crear las tarjetas dinámicamente
+                for (const casa in casas) {
+                    const habitaciones = casas[casa];
+
+                    // Crear la tarjeta de la casa
+                    let casaHTML = `
+                            <div class="casa-card">
+                                <div class="techo"></div>
+                                <div class="card-header">
+                                    Casa </br> ${casa}
+                                </div>
+                                <div class="card-body">
+                        `;
+
+                    // Agregar cada habitación a la tarjeta de la casa
+                    habitaciones.forEach(function (hab) {
+                        const habitacionClass = hab.estado ? 'foco' : 'apagado';
+                        casaHTML += `
+                                <div class="habitacion ${habitacionClass}">
+                                    ${hab.habitacion}
+                                </div>
+                            `;
+                    });
+
+                    casaHTML += `
+                                    </div>
+                                </div>
+
+                            </div>
+                        `;
+                    // Añadir la tarjeta de la casa al contenedor principal
+                    $('#container-hogares').append(casaHTML);
+                }
+            },
+            error: function (error) {
+                console.error('Error al obtener los datos:', error);
+            }
+        });
+    });
+</script>
+</body>
+</html>

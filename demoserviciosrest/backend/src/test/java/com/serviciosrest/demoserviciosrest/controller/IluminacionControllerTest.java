@@ -1,6 +1,6 @@
 package com.serviciosrest.demoserviciosrest.controller;
 
-import com.serviciosrest.demoserviciosrest.IluminacionHogarDTO;
+import com.serviciosrest.demoserviciosrest.dto.IluminacionHogarDTO;
 import com.serviciosrest.demoserviciosrest.manager.IluminacionManagerImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
