@@ -5,7 +5,7 @@
 ## Proyectos incluidos
 
 1. **Backend en Spring Boot**
-   - Proyecto que implementa una API REST usando Spring Boot con Java 21. Incluye conexión de bases de datos relacionales mysql en nube azure y h2, ademas de guías para despliegues en AWS usando imagenes docker. [Ver proyecto](demoserviciosrest/Backend/README.md)
+   - Proyecto que implementa una API REST usando Spring Boot con Java 21. Incluye conexión de bases de datos relacionales mysql en nube azure y h2, ademas de guías para despliegues en AWS usando imagenes docker. [Ver proyecto](demoserviciosrest/backend/README.md)
    
 2. **Aplicación Login usando Cognito AWS**
    - Proyecto que implementa una API REST protegida con Cognito AWS. 
