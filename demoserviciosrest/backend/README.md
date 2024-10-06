@@ -1,6 +1,6 @@
 # Api Rest Básico
 
-> Api Rest endpoint
+> Proyecto de API REST para un sistema de domótica, diseñado para extraer y gestionar información de un hogar, incluyendo sus habitaciones y dispositivos conectados. Los datos se exponen en formato JSON, facilitando la visualización del estado de los dispositivos. Además, el proyecto incluye una página web interactiva que muestra estos datos, renderizando el estado de las luces, indicando si están encendidas o apagadas según corresponda en cada habitación. Incluye una guía de como generar imagen docker y desplegarla en AWS Elastic Container Service.
 
 ## Características
 
