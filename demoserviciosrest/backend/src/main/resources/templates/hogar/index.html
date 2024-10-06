@@ -73,9 +73,10 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
     $(document).ready(function () {
-        // Realizar una petición AJAX para obtener los datos de las habitaciones y dispositivos
+        const baseUrl = window.location.origin;  // Obtiene 'http://servidor:puerto'
+        const apiUrl = `${baseUrl}/control-hogar/api/iluminacion/consultar`;
         $.ajax({
-            url: 'http://localhost:8081/control-hogar/api/iluminacion/consultar',  // Aquí se llama a tu API para obtener los datos
+            url: apiUrl,
             method: 'GET',
             success: function (response) {
                 // Crear un objeto para almacenar las casas y sus habitaciones

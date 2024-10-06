@@ -37,6 +37,9 @@ la base de datos es temporal, esto es un ejemplo.
 
 9. **Scripts bd**
  - ver: doc/scripts-bd.sql
+
+10. Desplegar en docker local y ECS AWS
+ - [Readme configuracion docker](README-DOCKER-AWS.md) 
 ---
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)
