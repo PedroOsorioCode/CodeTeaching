@@ -5,16 +5,10 @@
 ## Proyectos incluidos
 
 1. **Backend en Spring Boot**
-   - Proyecto que implementa una API REST usando Spring Boot. Incluye manejo de bases de datos relacionales postgresql nube azure y ejemplos de buenas prácticas en desarrollo de backend.
-
-2. **Backend en .NET**
-   - Proyecto que implementa una API REST usando Spring Boot. Incluye manejo de bases de datos relacionales mysql desplegado en un contenedor y ejemplos de buenas prácticas en desarrollo de backend.
-
-3. **Sistema visualización (Domótica) con Angular**
-   - Aplicación web desarrollada en Angular para visualización de encendido o apagado de dispositivos en un hogar. Incluye integración con un API backend.
-
-4. **Casa Inteligente (Domótica)**
-   - Simulación de una casa inteligente, donde se controla el encendido y apagado de luces en diferentes habitaciones utilizando Spring Boot para el backend y MongoDB como base de datos.
+   - Proyecto que implementa una API REST usando Spring Boot con Java 21. Incluye conexión de bases de datos relacionales mysql en nube azure y h2, ademas de guías para despliegues en AWS usando imagenes docker.
+   
+2. **Aplicación Login usando Cognito AWS**
+   - Proyecto que implementa una API REST protegida con Cognito AWS. 
 
 ## Cómo usar este repositorio
 
