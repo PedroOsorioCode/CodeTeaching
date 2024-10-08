@@ -8,7 +8,7 @@
    - Proyecto que implementa una API REST usando Spring Boot con Java 21. Incluye conexión de bases de datos relacionales mysql en nube azure y h2, ademas de guías para despliegues en AWS usando imagenes docker. [Ver proyecto](demoserviciosrest/backend/README.md)
    
 2. **Aplicación Login usando Cognito AWS**
-   - Proyecto que implementa una API REST protegida con Cognito AWS. 
+   - Proyecto en Angular con Cognito AWS, consume API gateway y a su vez una funcion Lambda en NodeJS. [Ver proyecto](angular-cognito/README.md)
 
 ## Cómo usar este repositorio
 
@@ -20,5 +20,5 @@ Sientete libre de clonar este repositorio y explorar los diferentes proyectos qu
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)
 **Start Date**: 28-09-2024
-**Update Date**: 06-10-2024
+**Update Date**: 06-10-2024.
 
