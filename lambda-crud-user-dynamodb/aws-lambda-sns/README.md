@@ -1,10 +1,10 @@
 # Frontend Angular conexión Cognito AWS
 
-> Proyecto en NodeJS que implementa funcionalidades CRUD a una bd DynamoDB
+> Proyecto en NodeJS que implementa envío de notificaciones SNS Email y SMS a Celular
 
 ### El proyecto incluye:
 
-- Operación GET, POST, PUT, DELETE, GET por ID
+- Operación GET
 
 ## Características
 
@@ -32,36 +32,42 @@
    ```
 
 4. **Instalar dependencias**
-   Generador del código primario del registro en la tabla
-   ```
-   npm i uuid
-   ```
    Sdk de AWS para conectarse a Dynamodb
    ```
    npm i aws-sdk
    ```
 
-5. **Ejecutar comando para desplegar las funciones**
+5. **Guardar metricas estructuradas**
+   ```
+   npm install aws-embedded-metrics
+   ```
+
+6. **Ejecutar comando para desplegar las funciones**
    ```
    serverless deploy --verbose
+   ```
    o
+   ```
    sls deploy
    ```
-   De acuerdo a las funciones y la configuración del archivo .yml, esto crea el apigateway, la función lamdba y la tabla en dynamoDB
+   De acuerdo a las funciones y la configuración del archivo .yml, esto crea el apigateway y la función lamdba
 
    **Nota:** Se requiere haber realizado el AWS configure para enlazar la solución con AWS
 
-6. **Resultado**
- - ![](doc/1_postman.png)
- - ![](doc/2_getusers.png)
- - ![](doc/3_createuser.png)
+7. **Se debe realizar la configuración del rol autorizando acceso al ARN del Topic creado**
+   ```
+   iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - sns:*
+      Resource:
+        - arn:aws:sns:us-east-1:284244831666:[Topic]
+   ```
 
-**Alarmas en CloudWatch**: Envía correo cuando se han superado los 2 errores 500, se creó en el metodo getUsers una funcionalidad que genera errores de forma aleatoria.
-
- - ![](doc/4_crear_alarma.png)
- - ![](doc/4_elegir_metrica.png)
- - ![](doc/4_Indicar_consulta.png)
- - ![](doc/5_crear_alarma.png)
+8. **Resultado**
+ - ![](docs/1_postman.png)
+ - ![](docs/2_mensaje_enviado_correo.png)
+ - ![](docs/3_SMS_Celular.png)
 
 ### Recursos adicionales
 - [Serverless Framework](https://www.serverless.com/framework/docs/getting-started)
@@ -70,5 +76,4 @@
 ---
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)
-**Start Date**: 14-10-2024
-
+**Start Date**: 21-10-2024
