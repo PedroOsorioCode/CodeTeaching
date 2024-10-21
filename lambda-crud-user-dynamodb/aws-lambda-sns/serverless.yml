@@ -1,0 +1,23 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: hogar
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: snsEmail2024
+
+provider:
+   name: aws
+   runtime: nodejs20.x
+   region: us-east-1
+   iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - sns:*
+      Resource:
+        - arn:aws:sns:us-east-1:284244831666:snsPedido
+
+functions:
+  hello:
+    handler: snsEmail2024/handler.snsEmail
+    events:
+      - httpApi:
+          path: /
+          method: get

@@ -10,6 +10,12 @@
 2. **Aplicación Login usando Cognito AWS**
    - Proyecto en Angular con Cognito AWS, consume API gateway y a su vez una funcion Lambda en NodeJS. [Ver proyecto](angular-cognito/README.md)
 
+3. **Aplicación Lambdas NodeJS con DynamoDB**
+   - Proyecto usando framework Serverless CRUD tabla usersTable en DynamoDB. [Ver proyecto](lambda-crud-user-dynamodb/README.md)
+
+4. **Aplicación Lambdas Usando SNS(Simple Notificacion Service)**
+   - Proyecto usando framework Serverless envío de correo y mensaje de texto. [Ver proyecto](lambda-crud-user-dynamodb/aws-lambda-sns/README.md)
+
 ## Cómo usar este repositorio
 
 Cada carpeta dentro del repositorio corresponde a un proyecto independiente. Puedes navegar a la carpeta de interés y encontrar un archivo `README.md` específico para ese proyecto, que describe cómo ejecutarlo, qué tecnologías se utilizan y las instrucciones para configuración y despliegue.
@@ -20,5 +26,5 @@ Sientete libre de clonar este repositorio y explorar los diferentes proyectos qu
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)
 **Start Date**: 28-09-2024
-**Update Date**: 06-10-2024.
+**Update Date**: 21-10-2024.
 
