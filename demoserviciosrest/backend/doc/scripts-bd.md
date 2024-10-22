@@ -36,3 +36,5 @@ INSERT INTO dispositivo (id_habitacion, tipo, estado) VALUES (4, 'Luz', true);
 SELECT c.nombre, h.tipo, d.estado FROM casa c 
 inner join habitacion h on c.id_casa = h.id_casa 
 inner join dispositivo d on h.id_habitacion = d.id_habitacion 
+
+[volver](../README.md)
