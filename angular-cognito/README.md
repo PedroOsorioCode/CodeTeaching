@@ -11,6 +11,11 @@
 
 ## Características
 
+**Obtener token por comando**
+```
+aws cognito-idp initiate-auth --client-id [Indicar aquí el cliente de AWS] --auth-flow USER_PASSWORD_AUTH --auth-parameters USERNAME=[Indicar aqui el user],PASSWORD=[Indicar aquí el password]
+```
+
 1. **Login**
    - ![](doc/1_login.png)
    - ![](doc/1_login_datos_obligatorios.png)
