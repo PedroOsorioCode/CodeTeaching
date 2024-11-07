@@ -5,7 +5,7 @@
 ## Proyectos incluidos
 
 1. **Backend en Spring Boot**
-   - Proyecto que implementa una API REST usando Spring Boot con Java 21. Incluye conexión de bases de datos relacionales mysql en nube azure y h2, ademas de guías para despliegues en AWS usando imagenes docker. [Ver proyecto](demoserviciosrest/backend/README.md)
+   - Proyecto que implementa una API REST usando Spring Boot con Java 21. Incluye conexión de bases de datos relacionales mysql en nube azure y h2, ademas de guías para despliegues en AWS usando imagenes docker. [Ver proyecto](demoserviciosrest/back-api-simple/README.md)
    
 2. **Aplicación Login usando Cognito AWS**
    - Proyecto en Angular con Cognito AWS, consume API gateway y a su vez una funcion Lambda en NodeJS. [Ver proyecto](angular-cognito/README.md)
@@ -16,6 +16,9 @@
 4. **Aplicación Lambdas Usando SNS(Simple Notificacion Service)**
    - Proyecto usando framework Serverless envío de correo y mensaje de texto. [Ver proyecto](lambda-crud-user-dynamodb/aws-lambda-sns/README.md)
 
+5. **Aplicación Microservicios - Arquitectura Hexagonal - SpringWebflux - Mysql - TestUnitarios - Aplicación Angular**
+   - 3 Microservicios con SpringWebFlux e interconectados. [Ver proyecto](Microservicios-Hexagonal-Webflux/README-HX.md)
+
 ## Cómo usar este repositorio
 
 Cada carpeta dentro del repositorio corresponde a un proyecto independiente. Puedes navegar a la carpeta de interés y encontrar un archivo `README.md` específico para ese proyecto, que describe cómo ejecutarlo, qué tecnologías se utilizan y las instrucciones para configuración y despliegue.
@@ -24,7 +27,7 @@ Sientete libre de clonar este repositorio y explorar los diferentes proyectos qu
 
 ---
 
-**Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)
-**Start Date**: 28-09-2024
+**Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)  
+**Start Date**: 28-09-2024  
 **Update Date**: 21-10-2024.
 
