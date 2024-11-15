@@ -29,4 +29,8 @@ public class CasaEntity implements Serializable {
 
     @OneToMany(mappedBy = "casa", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<HabitacionEntity> habitaciones;
+
+    public CasaEntity(String nombre) {
+        this.nombre = nombre;
+    }
 }

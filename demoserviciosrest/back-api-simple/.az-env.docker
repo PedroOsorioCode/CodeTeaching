@@ -1,0 +1,3 @@
+MY_SQL_URL=jdbc:mysql://server-testbd-mysql.mysql.database.azure.com:3306/dbdomotica
+MY_SQL_USER=adminazmysql
+MY_SQL_PASS=Test*321

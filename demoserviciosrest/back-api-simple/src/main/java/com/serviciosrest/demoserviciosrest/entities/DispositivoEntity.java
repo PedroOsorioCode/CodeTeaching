@@ -32,4 +32,10 @@ public class DispositivoEntity implements Serializable {
 
     @Column(name = "estado", nullable = false)
     private Boolean estado;
+
+    public DispositivoEntity(String tipo, boolean estado, HabitacionEntity habitacion) {
+        this.tipo = tipo;
+        this.estado = estado;
+        this.habitacion = habitacion;
+    }
 }

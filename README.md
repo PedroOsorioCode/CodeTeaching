@@ -7,19 +7,13 @@
 1. **Aplicación Microservicios - Arquitectura Hexagonal - SpringWebflux - Mysql - TestUnitarios - Aplicación Angular**
    - 3 Microservicios con SpringWebFlux e interconectados y Aplicación en Angular para consumo de las Apis REST [Ver proyecto](Microservicios-Hexagonal-Webflux/README-HX.md)
 
-## Proyectos AWS Cloud
+## Proyectos AWS Cloud 
 
-1. **Backend en Spring Boot**
-   - Proyecto que implementa una API REST usando Spring Boot con Java 21. Incluye conexión de bases de datos relacionales mysql en nube AWS o H2, ademas de guías para despliegues en AWS usando imagenes docker. [Ver proyecto](demoserviciosrest/back-api-simple/README.md)
-   
-2. **Aplicación Login usando Cognito AWS**
-   - Proyecto en Angular con Cognito AWS, consume API gateway y a su vez una funcion Lambda en NodeJS. [Ver proyecto](angular-cognito/README.md)
+[Ver los proyectos de AWS](README-AWS.md)
 
-3. **Aplicación Lambdas NodeJS con DynamoDB**
-   - Proyecto usando framework Serverless CRUD tabla usersTable en DynamoDB. [Ver proyecto](lambda-crud-user-dynamodb/README.md)
+## Proyectos Azure Cloud 
 
-4. **Aplicación Lambdas Usando SNS(Simple Notificacion Service)**
-   - Proyecto usando framework Serverless envío de correo y mensaje de texto. [Ver proyecto](lambda-crud-user-dynamodb/aws-lambda-sns/README.md)
+[Ver los proyectos de Azure](README-AZURE.md)
    
 ## Arquetipos
 
@@ -39,5 +33,5 @@ Sientete libre de clonar este repositorio y explorar los diferentes proyectos qu
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)  
 **Start Date**: 28-09-2024  
-**Update Date**: 08-11-2024.
+**Update Date**: 14-11-2024.
 
