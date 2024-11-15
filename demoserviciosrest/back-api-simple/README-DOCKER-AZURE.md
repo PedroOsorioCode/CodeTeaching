@@ -4,7 +4,16 @@
 
 **Importante**: El costo promedio de esta implementación es de alrededor de **20USD**
 
+Abrir consola
+![](doc/20_cloud_shell_azure.png)
+
+Script para crear grupo de recursos
+```
+az group create --name rg_aks_bd --location eastus
+```
+
 1. **Crear BD Mysql**
+
     1. Teniendo la cuenta de Azure, elegir: Azure Database for MySQL
     2. Creación avanzada
     3. Elegir grupo de recursos y dar nombre al servidor

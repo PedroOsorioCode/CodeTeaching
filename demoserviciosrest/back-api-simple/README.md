@@ -22,9 +22,6 @@
 
 3. **Scripts bd**
  - [ver scripts](doc/scripts-bd.sql)
-
-4. **Capturas de pantalla**
- - [Ver capturas](README-IMG.md)
 ---
 
 [Volver al inicio](../../README.md)

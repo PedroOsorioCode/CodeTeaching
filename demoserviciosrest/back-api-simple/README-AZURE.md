@@ -13,17 +13,14 @@
 
 # Documentación
 
-1. **Recurso guía creación bd mysql**
- - [Url Guía crear bd en AZURE](https://www.youtube.com/watch?v=vlYV4_8VN70)
-
-2. **Scripts bd**
- - [ver scripts](doc/scripts-bd.sql)
-
-3. **Desplegar en Docker local y K8S AWS**
+1. **Desplegar en Docker local y K8S AWS**
  - [Readme configuracion docker Azure](README-DOCKER-AZURE.md) 
 
-4. **Capturas de pantalla**
- - [Ver capturas](README-AZURE-IMG.md)
+2. **Recurso guía creación bd mysql**
+ - [Url Guía crear bd en AZURE](https://www.youtube.com/watch?v=vlYV4_8VN70)
+
+3. **Scripts bd**
+ - [ver scripts](doc/scripts-bd.sql)
 ---
 
 [Volver al inicio](../../README.md)
