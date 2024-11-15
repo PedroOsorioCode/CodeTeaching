@@ -13,7 +13,7 @@
 3. **Aplicación Lambdas NodeJS con DynamoDB**
    - Proyecto usando framework Serverless CRUD tabla usersTable en DynamoDB.
 
-4. **Aplicación Lambdas Usando SNS(Simple Notificacion Service)**
+4. **Aplicación Lambdas Usando Azure Communication Services (ACS)**
    - Proyecto usando framework Serverless envío de correo y mensaje de texto.
 
 [Volver al inicio](README.md)

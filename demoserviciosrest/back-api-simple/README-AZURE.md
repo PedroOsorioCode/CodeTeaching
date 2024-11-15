@@ -13,7 +13,7 @@
 
 # Documentación
 
-1. **Desplegar en Docker local y K8S AWS**
+1. **Desplegar en kubernetes Azure**
  - [Readme configuracion docker Azure](README-DOCKER-AZURE.md) 
 
 2. **Recurso guía creación bd mysql**
