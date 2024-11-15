@@ -14,20 +14,20 @@
 
 # Documentación
 
-1. **Recurso guía creación bd mysql**
+1. **Desplegar en docker local y ECS AWS**
+ - [Readme guía Api rest en AWS](README-DOCKER-AWS.md) 
+
+2. **Recurso guía creación bd mysql**
  - [Url Guía crear bd en aws](https://aws.amazon.com/es/getting-started/hands-on/create-mysql-db/?ref=gsrchandson)
 
-2. **Scripts bd**
+3. **Scripts bd**
  - [ver scripts](doc/scripts-bd.sql)
-
-3. **Desplegar en docker local y ECS AWS**
- - [Readme configuracion docker](README-DOCKER-AWS.md) 
 
 4. **Capturas de pantalla**
  - [Ver capturas](README-IMG.md)
 ---
 
-[Volver al inicio](../CodeTeaching/README.md)
+[Volver al inicio](../../README.md)
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)  
 **Start Date**: 01-10-2024  

@@ -15,3 +15,9 @@
 
 4. **Aplicación Lambdas Usando SNS(Simple Notificacion Service)**
    - Proyecto usando framework Serverless envío de correo y mensaje de texto. [Ver proyecto](lambda-crud-user-dynamodb/aws-lambda-sns/README.md)
+
+[Volver al inicio](README.md)
+
+**Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)  
+**Start Date**: 14-11-2024  
+**Update Date**: 14-11-2024.      
