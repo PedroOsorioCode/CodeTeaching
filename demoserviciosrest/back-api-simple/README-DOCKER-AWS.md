@@ -1,4 +1,5 @@
 # Guía desplegar docker local y aws
+
 > Describe los pasos a realizar para desplegar nuestra aplicación en un docker local y luego como extraer la imagen para hacerlo en ECS AWS
 
 1. **Crear el .jar**
@@ -34,10 +35,9 @@
     ```
     5. probamos la aplicación en el servidor local, si aplica H2 se ejecutan scripts, de lo contrario ya al iniciar la bd deben estar ejecutados.
     ```
-    http://localhost:9001/control-hogar/h2-console
-    http://localhost:9001/control-hogar/home
-    http://localhost:9001/control-hogar/api/iluminacion/consultar
-    http://localhost:9001/control-hogar/swagger-ui/index.html
+    http://localhost:9001/api/iluminacion/consultar
+    http://localhost:9001/api/iluminacion/guardar
+    http://localhost:9001/swagger-ui/index.html
     ```
     6. aprovisionamos la base de datos h2 con los scripts de base de datos para que las demas consultas descargue los datos.
 
@@ -83,12 +83,16 @@ Recurso para agrupar contenedores
 1. Seleccionar ECS
 2. Crear un cluster: ecs-demorestapi
 3. Crear la definición de una tarea  
+Ejemplo JSON: Debe ser así para que funcione el balanceador de carga  
+![](doc/10_Json_task_definition.jpeg)
 name: springboot-domotica-td  
 rol:  none  
 SO: Linux  
 CPU: 1gb  
 RAM: 2gb  
 Container: Indicar nombre y la url del contenedor registry  
+4. Otorgar permisos al Rol en IAM a: ecsTaskExecutionRole -> add permisions -> create inline policy -> Elegir todas las opciones, dar un nombre y guardar
+![](doc/11_politicas_system_manager_secret.png)
 
 ## Crear tareas: [ver](https://youtu.be/YO6WP9MbYrY?t=1943)
 

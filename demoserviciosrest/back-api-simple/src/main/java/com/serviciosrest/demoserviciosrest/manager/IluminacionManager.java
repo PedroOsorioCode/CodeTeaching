@@ -1,5 +1,6 @@
 package com.serviciosrest.demoserviciosrest.manager;
 
+import com.serviciosrest.demoserviciosrest.dto.CasaDto;
 import com.serviciosrest.demoserviciosrest.dto.IluminacionHogarDTO;
 
 import java.util.List;
@@ -12,5 +13,6 @@ public interface IluminacionManager {
      * Documente
      */
     List<IluminacionHogarDTO> consultar();
+    void guardarCasa(CasaDto casaDto);
 
 }

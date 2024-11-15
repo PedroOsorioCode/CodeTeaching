@@ -33,4 +33,9 @@ public class HabitacionEntity implements Serializable {
 
     @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DispositivoEntity> dispositivos;
+
+    public HabitacionEntity(String tipo, CasaEntity casa) {
+        this.tipo = tipo;
+        this.casa = casa;
+    }
 }
