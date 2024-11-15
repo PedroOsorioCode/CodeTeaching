@@ -2,7 +2,7 @@
 
 > Este repositorio contiene una colección de proyectos creados en Java + springboot + Azure
 
-## Proyectos AWS Cloud
+## Proyectos Azure Cloud
 
 1. **Backend en Spring Boot**
    - Proyecto que implementa una API REST usando Spring Boot con Java 21. Incluye conexión de bases de datos relacionales mysql en nube Azure o H2, ademas de guías para despliegues en Azure containter instance o azure kubernetes usando imagenes docker, balanceadores de carga y api management [Ver proyecto](demoserviciosrest/back-api-simple/README-AZURE.md)
@@ -16,8 +16,8 @@
 4. **Aplicación Lambdas Usando SNS(Simple Notificacion Service)**
    - Proyecto usando framework Serverless envío de correo y mensaje de texto.
 
-[Volver al inicio](../CodeTeaching/README.md)
+[Volver al inicio](README.md)
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)  
-**Start Date**: 13-11-2024  
-**Update Date**: 14-11-2024.
+**Start Date**: 14-11-2024  
+**Update Date**: 14-11-2024.   

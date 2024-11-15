@@ -4,8 +4,7 @@
 
 ## Proyectos Backend
 
-1. **Aplicación Microservicios - Arquitectura Hexagonal - SpringWebflux - Mysql - TestUnitarios - Aplicación Angular**
-   - 3 Microservicios con SpringWebFlux e interconectados y Aplicación en Angular para consumo de las Apis REST [Ver proyecto](Microservicios-Hexagonal-Webflux/README-HX.md)
+[Ver los proyectos de APIs JAVA](README-BACKEND.md)
 
 ## Proyectos AWS Cloud 
 
@@ -17,11 +16,7 @@
    
 ## Arquetipos
 
-1. **Angular**
-	- Aplicación base para pruebas de Apis Rest [Ver proyecto](Arquetipo-Angular/README.md)
-
-2. **Arquitectura Hexagonal SpringBoot**
-   - Aplicación en Springboot con empaquetado basado en arquitectura hexagonal y clases de utilidades
+[Ver los proyectos de Azure](README-ARQUETIPOS.md)
 
 ## Cómo usar este repositorio
 
@@ -33,5 +28,5 @@ Sientete libre de clonar este repositorio y explorar los diferentes proyectos qu
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)  
 **Start Date**: 28-09-2024  
-**Update Date**: 14-11-2024.
+**Update Date**: 15-11-2024.
 

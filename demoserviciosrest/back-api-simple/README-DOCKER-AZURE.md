@@ -1,8 +1,19 @@
 # Guía BD Azure, desplegar Docker local y Azure en Kubernetes
 
-> Describe los pasos a realizar para desplegar nuestra aplicación en un docker local y luego como extraer la imagen para hacerlo en K8S Azure
+> Describe los pasos a realizar para desplegar nuestra aplicación en un docker local y luego como extraer la imagen para hacerlo en Azure Kubernetes con balanceador de carga y acceso por Api Management
+
+**Importante**: El costo promedio de esta implementación es de alrededor de **20USD**
+
+Abrir consola
+![](doc/20_cloud_shell_azure.png)
+
+Script para crear grupo de recursos
+```
+az group create --name rg_aks_bd --location eastus
+```
 
 1. **Crear BD Mysql**
+
     1. Teniendo la cuenta de Azure, elegir: Azure Database for MySQL
     2. Creación avanzada
     3. Elegir grupo de recursos y dar nombre al servidor
@@ -55,7 +66,7 @@
     ```
     6. aprovisionamos la base de datos h2 con los scripts de base de datos para que la consulta descargue los datos.
 
-4. **Desplegar en AZURE**
+4. **Subir imagen al portal de AZURE**
     1. Instalar CLi de Azure [Ver guía](https://learn.microsoft.com/es-es/cli/azure/install-azure-cli-windows?tabs=azure-cli)
     2. Abrir consola de comandos
     ```
@@ -194,11 +205,11 @@ kubectl logs [nombre del POD]
 ```
 touch service.yaml
 ```
-11. En el shell colocar, para abrir el editor
+18. En el shell colocar, para abrir el editor
 ```
 code .
 ```
-17. Escribimos en el archivo service.yaml
+19. Escribimos en el archivo service.yaml
 ```
 apiVersion: v1
 kind: Service
@@ -213,23 +224,23 @@ spec:
     port: 80
     targetPort: 8080 # Puerto del deployment.yaml escucha
 ```
-18. Ejecutar el manifiesto
+20. Ejecutar el manifiesto
 ```
 kubectl apply -f ./service.yaml
 ```
-18. ver la IP externa del balanceador de carga
+21. ver la IP externa del balanceador de carga
 ```
 kubectl get services
 ```
-19. Reiniciar el despliegue si es necesario
+22. Reiniciar el despliegue si es necesario
 ```
 kubectl rollout restart deployment domotica-website
 ```
-20. Acceder a la aplicación por la IP externa, ejemplo:
+23. Acceder a la aplicación por la IP externa, ejemplo:
 ```
 http://48.214.169.61/api/iluminacion/consultar
 ```
-21. Url Documentación swagger
+24. Url Documentación swagger
 ```
 http://48.214.169.61/swagger-ui/index.html#/
 ```
@@ -255,6 +266,22 @@ Directamente esto genera error: { "statusCode": 401, "message": "Access denied d
 ![](doc/12_api_management_postman_consultar.png)
 ![](doc/12_api_management_postman_guardar.png)
 
+# Azure API Configuration
+
+1. Creamos las variables de entorno en recursos de configuración para evitar quemarlos en el manisfiesto, definir las variables que requerimos
+```
+export RESOURCE_GROUP=rg_aks_centraldemo
+export CONFIGURATION_NAME=appconfig-db-domotica
+export LOCATION=centralus
+```
+2. Creamos el recurso de configuración
+```
+az appconfig create --name $CONFIGURATION_NAME --resource-group $RESOURCE_GROUP --location $LOCATION
+```
+3. Crear la clave con la información de la url
+```
+az appconfig kv set --name $CONFIGURATION_NAME --key MY_SQL_URL --value "jdbc:mysql://server-testbd-mysql.mysql.database.azure.com:3306/dbdomotica"
+```
 ### Recursos adicionales
 - [Crear imagen y subir a ACR](https://www.youtube.com/watch?v=Rh8u3kv4nOk)
 - [Crear K8s en Azure](https://learn.microsoft.com/es-es/training/modules/aks-deploy-container-app/)
@@ -262,3 +289,9 @@ Directamente esto genera error: { "statusCode": 401, "message": "Access denied d
 - [Tipos de servicios en K8s](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types)
 - [Documentación Azure kubernetes](https://learn.microsoft.com/es-es/azure/architecture/reference-architectures/containers/aks-start-here)
 - [Documentación oficial Kubernetes](https://kubernetes.io/es/docs/home/)
+
+[Volver al inicio](README-AZURE.md)
+
+**Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)  
+**Start Date**: 13-11-2024  
+**Update Date**: 15-11-2024.
