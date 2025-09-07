@@ -16,7 +16,7 @@
 
 1. **Crear las bases de datos locales con docker**
    ```
-    docker run --name mysql-db-usuario -e MYSQL_ROOT_PASSWORD=micro132*  -e MYSQL_DATABASE=usuarios  -e MYSQL_PASSWORD=micro132*  -p 3310:3306 -d mysql:latest
+    podman run --name mysql-db-usuario -e MYSQL_ROOT_PASSWORD=micro132*  -e MYSQL_DATABASE=usuarios  -e MYSQL_PASSWORD=micro132*  -p 3310:3306 -d mysql:latest
     ```
     ```
     docker run --name mysql-db-plazoleta -e MYSQL_ROOT_PASSWORD=micro132*  -e MYSQL_DATABASE=plazoleta  -e MYSQL_PASSWORD=micro132* -p 3311:3306  -d mysql:latest

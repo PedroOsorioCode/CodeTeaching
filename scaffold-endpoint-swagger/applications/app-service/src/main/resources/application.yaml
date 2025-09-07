@@ -1,0 +1,54 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "ConfigOpenApi"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+management:
+  health:
+    probes:
+      enabled: true
+  endpoint:
+    health:
+      show-details: "${SHOW_DETAILS:never}"
+      enabled: true
+      cache:
+        time-to-live: "10s"
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      base-path: "${PATH_BASE:/api/v1/config-openapi/}"
+      path-mapping:
+        health: "health"
+        liveness: "liveness"
+        readiness: "readiness"
+      exposure:
+        include: "health,prometheus"
+logging:
+  level:
+    root: "${LOG4J_LEVEL:INFO}"
+springdoc:
+  version: "1.0.0"
+  api-docs:
+    enabled: true
+    path: "${PATH_BASE:/api/v1/config-openapi/api-docs}"
+  swagger-ui:
+    path: "${PATH_BASE:/api/v1/config-openapi/swagger-ui.html}"
+entries:
+  reactive-web:
+    path-base: "${PATH_BASE:/api/v1/config-openapi/}"
+    method-get: "getdata"
+    method-post: "postdata"
+    method-put: "putdata/{id}"
+    method-delete: "deletedata/{id}"
+    method-find: "finddata/{parameter}"
+cors:
+  allowed-origins: "http://localhost:4200,http://localhost:8080"
